@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game extends Application {
+
     GraphicsContext gc;
     List<gameObject> gameObjectList = new ArrayList<>();
 
@@ -35,15 +36,26 @@ public class Game extends Application {
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
-            public void handle(long l) {
+            public void handle(long now) {
                 render();
                 update();
             }
         };
         timer.start();
 
-        gameObjectList.add(createTank());
+        gameObjectList.add(createRunner());
     }
+
+    // update
+    public void update(){
+        gameObjectList.forEach(gameObject -> gameObject.update());
+    }
+    //draw
+    public void render(){
+        drawMap(gc);
+        gameObjectList.forEach(g -> g.render(gc));
+    }
+
     // Map image
     public final static String[][] mapNum = new String[][]{
             {"162","162","162","162","038","084","103","103","103","103"},
@@ -66,7 +78,7 @@ public class Game extends Application {
             new Point( 9*64 + 32 , 4*64 + 32 )
     };
 
-    //drow map
+    //draw map
     private void drawMap(GraphicsContext gc ){
         for( int i = 0; i < mapNum.length; i++ ){
             for( int j = 0; j < mapNum[i].length; j++ ){
@@ -115,30 +127,43 @@ public class Game extends Application {
         Image sand3 = iv8.snapshot(param, null);
         gc.drawImage(sand3, 8*64 , 1*64 );
     }
-    // update
-    public void update(){
-        gameObjectList.forEach(gameObject -> gameObject.update());
+
+    //This method to calculate distance
+    public static double distance(int x1, int y1, int x2, int y2) {
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
-    //draw
-    public void render(){
-        drawMap(gc);
-        gameObjectList.forEach(g -> g.render(gc));
-    }
+
     //create enemy
     public Tank createTank(){
         Tank tank = new Tank();
-        tank.x = 32;
-        tank.y = 7*64 + 32;
+        tank.x = wayPoints[0].x;
+        tank.y = wayPoints[0].y;
         tank.speed = 4;
         tank.img = new Image("file:src/Default size/towerDefense_tile268.png");
         tank.gunImg = new Image("file:src/Default size/towerDefense_tile291.png");
 
         return tank;
     }
-    //This method to calculate distance
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+
+    public Plane createPlane(){
+        Plane plane = new Plane();
+        plane.x = 0;
+        plane.y = 0 ;
+        plane.speed = 5;
+        plane.img = new Image("file:src/Default size/towerDefense_tile270.png");
+        plane.shadowImg = new Image("file:src/Default size/towerDefense_tile293.png");
+        return plane;
     }
+
+    public Runner createRunner(){
+        Runner runner = new Runner();
+        runner.x = wayPoints[0].x;
+        runner.y = wayPoints[0].y;
+        runner.speed = 7;
+        runner.img = new Image("file:src/Default size/towerDefense_tile245.png");
+        return runner;
+    }
+
 }
 
 

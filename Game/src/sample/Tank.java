@@ -25,6 +25,7 @@ public class Tank extends Critter {
         gc.drawImage(base, x, y);
         gc.drawImage(gun, x, y);
     }
+
     int calculateDirection() {
         if( this.x  >= Game.wayPoints[6].x + 100) return 0;
         else if(this.x <= Game.wayPoints[1].x && this.y > Game.wayPoints[1].y) return Direction.UP.getDegree();
@@ -37,9 +38,9 @@ public class Tank extends Critter {
     }
 
     void update() {
-            if(calculateDirection() == 0 && this.x < Game.wayPoints[6].x + 100) x += this.speed;
-            else if(calculateDirection() == 90) y += this.speed;
-            else if(calculateDirection() == 270) y -= this.speed;
-            else if(calculateDirection() == 180) x -= this.speed;
+        if(calculateDirection() == 0 && this.x < Game.wayPoints[6].x + 100) x += this.speed;
+        else if(calculateDirection() == 90) y += this.speed;
+        else if(calculateDirection() == 270) y -= this.speed;
+        else if(calculateDirection() == 180) x -= this.speed;
     }
 }
