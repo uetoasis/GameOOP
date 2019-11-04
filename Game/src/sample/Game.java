@@ -44,7 +44,7 @@ public class Game extends Application {
 
         gameObjectList.add(createTank());
     }
-    // mang 2 chieu de load anh
+    // Map image
     public final static String[][] mapNum = new String[][]{
             {"162","162","162","162","038","084","103","103","103","103"},
             {"162","162","162","141","185","126","126","083","103","103"},
@@ -55,9 +55,8 @@ public class Game extends Application {
             {"030","005","006","006","032","160","160","111","111","111"},
             {"030","028","111","160","160","160","160","160","160","160"},
     };
-    //Toa do duong di
 
-    //ve map
+    //drow map
     private void drawMap(GraphicsContext gc ){
         for( int i = 0; i < mapNum.length; i++ ){
             for( int j = 0; j < mapNum[i].length; j++ ){
@@ -106,25 +105,27 @@ public class Game extends Application {
         Image sand3 = iv8.snapshot(param, null);
         gc.drawImage(sand3, 8*64 , 1*64 );
     }
-    // update cho obj di chuyen
+    // update
     public void update(){
         gameObjectList.forEach(gameObject -> gameObject.update());
     }
-    //ve
+    //draw
     public void render(){
         drawMap(gc);
         gameObjectList.forEach(g -> g.render(gc));
     }
-    //ham tao ke dich
+    //create enemy
     public Tank createTank(){
         Tank tank = new Tank();
         tank.x = 32;
         tank.y = 7*64 + 32;
-        tank.img = new Image("file:src/Default size/towerDefense_tile226.png");
-        tank.gunImg = new Image("file:src/Default size/towerDefense_tile251.png");
+        tank.speed = 20;
+        tank.img = new Image("file:src/Default size/towerDefense_tile268.png");
+        tank.gunImg = new Image("file:src/Default size/towerDefense_tile291.png");
+
         return tank;
     }
-    //tính khoang cach
+    //This method to calculate distance
     public static double distance(int x1, int y1, int x2, int y2) {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
