@@ -141,7 +141,6 @@ public class Game extends Application {
         tank.speed = 4;
         tank.img = new Image("file:src/Default size/towerDefense_tile268.png");
         tank.gunImg = new Image("file:src/Default size/towerDefense_tile291.png");
-
         return tank;
     }
 
