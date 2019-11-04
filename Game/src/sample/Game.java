@@ -56,6 +56,16 @@ public class Game extends Application {
             {"030","028","111","160","160","160","160","160","160","160"},
     };
 
+    public final static  Point[] wayPoints = new Point[]{
+            new Point( 0*64 + 32 , 7*64 + 32 ),//0
+            new Point( 0*64 + 32 , 5*64 + 32 ),//1
+            new Point( 3*64 + 32 , 5*64 + 32 ),//2
+            new Point( 3*64 + 32 , 1*64 + 32 ),//3
+            new Point( 6*64 + 32 , 1*64 + 32 ),//4
+            new Point( 6*64 + 32 , 4*64 + 32 ),//5
+            new Point( 9*64 + 32 , 4*64 + 32 )
+    };
+
     //drow map
     private void drawMap(GraphicsContext gc ){
         for( int i = 0; i < mapNum.length; i++ ){
@@ -119,7 +129,7 @@ public class Game extends Application {
         Tank tank = new Tank();
         tank.x = 32;
         tank.y = 7*64 + 32;
-        tank.speed = 20;
+        tank.speed = 4;
         tank.img = new Image("file:src/Default size/towerDefense_tile268.png");
         tank.gunImg = new Image("file:src/Default size/towerDefense_tile291.png");
 
