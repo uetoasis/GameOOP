@@ -12,7 +12,7 @@ public abstract class gameObject {
     abstract void render(GraphicsContext gc);
     // huong
     enum Direction{
-        LEFT(270), UP(0), RIGHT(90), DOWN(180);
+        LEFT(180), UP(270), RIGHT(0), DOWN(90);
         int degree;
 
         Direction( int i ){
