@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 
 public class Tank extends Critter {
     Image gunImg;
-
+    int damageToTower;
     @Override
     void render(GraphicsContext gc ) {
         SnapshotParameters param = new SnapshotParameters();

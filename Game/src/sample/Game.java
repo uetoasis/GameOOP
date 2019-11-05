@@ -135,44 +135,14 @@ public class Game extends Application {
         return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 
-    //create enemy
+    //Spawn Enemy Troop
     public void spawnTroop(){
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1500), event ->{
-            gameObjectList.add(createTank());
+            gameObjectList.add(Controller.createRunner4());
         }));
         timeline.setCycleCount(5);
         timeline.play();
     }
-
-    public Tank createTank(){
-        Tank tank = new Tank();
-        tank.x = wayPoints[0].x;
-        tank.y = wayPoints[0].y;
-        tank.speed = 4;
-        tank.img = new Image("file:src/Default size/towerDefense_tile268.png");
-        tank.gunImg = new Image("file:src/Default size/towerDefense_tile291.png");
-        return tank;
-    }
-
-    public Plane createPlane(){
-        Plane plane = new Plane();
-        plane.x = 0;
-        plane.y = 0 ;
-        plane.speed = 5;
-        plane.img = new Image("file:src/Default size/towerDefense_tile270.png");
-        plane.shadowImg = new Image("file:src/Default size/towerDefense_tile293.png");
-        return plane;
-    }
-
-    public Runner createRunner(){
-        Runner runner = new Runner();
-        runner.x = wayPoints[0].x;
-        runner.y = wayPoints[0].y;
-        runner.speed = 7;
-        runner.img = new Image("file:src/Default size/towerDefense_tile245.png");
-        return runner;
-    }
-
 }
 
 

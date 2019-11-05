@@ -36,4 +36,6 @@ public class Runner extends Critter {
         else if(calculateDirection() == 270) y -= this.speed;
         else if(calculateDirection() == 180) x -= this.speed;
     }
+
+
 }
