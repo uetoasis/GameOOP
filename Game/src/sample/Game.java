@@ -1,6 +1,8 @@
 package sample;
 
 import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -11,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +45,7 @@ public class Game extends Application {
             }
         };
         timer.start();
-
-        gameObjectList.add(createRunner());
+        spawnTroop();
     }
 
     // update
@@ -134,6 +136,14 @@ public class Game extends Application {
     }
 
     //create enemy
+    public void spawnTroop(){
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1500), event ->{
+            gameObjectList.add(createTank());
+        }));
+        timeline.setCycleCount(5);
+        timeline.play();
+    }
+
     public Tank createTank(){
         Tank tank = new Tank();
         tank.x = wayPoints[0].x;

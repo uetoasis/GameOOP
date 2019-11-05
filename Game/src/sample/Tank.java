@@ -38,9 +38,9 @@ public class Tank extends Critter {
     }
 
     void update() {
-        if(calculateDirection() == 0 && this.x < Game.wayPoints[6].x + 100) x += this.speed;
-        else if(calculateDirection() == 90) y += this.speed;
-        else if(calculateDirection() == 270) y -= this.speed;
-        else if(calculateDirection() == 180) x -= this.speed;
+        if (calculateDirection() == 0 && this.x < Game.wayPoints[6].x + 100) x += this.speed;
+        else if (calculateDirection() == 90) y += this.speed;
+        else if (calculateDirection() == 270) y -= this.speed;
+        else if (calculateDirection() == 180) x -= this.speed;
     }
 }
