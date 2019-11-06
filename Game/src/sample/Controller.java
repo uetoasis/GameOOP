@@ -72,7 +72,7 @@ public class Controller {
 
         //tank index
         tank.health = 100;
-        tank.speed = 2;
+        tank.speed = 3;
         tank.armor = 10;
         tank.reward = 50;
         tank.damageToTower = 15;
@@ -105,7 +105,7 @@ public class Controller {
         return tank;
     }
 
-    public Plane createNormalPlane(){
+    public static Plane createNormalPlane(){
         Plane plane = new Plane();
 
         plane.health = 75;
