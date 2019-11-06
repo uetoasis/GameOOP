@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Add emenyTroop">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Move create">
       <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Default size/towerDefense_tile287.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Default size/towerDefense_tile287.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Critter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Critter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Plane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Runner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Tank.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -266,6 +265,8 @@
     <MESSAGE value="update3" />
     <MESSAGE value="update4" />
     <MESSAGE value="Add emenyTroop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add emenyTroop" />
+    <MESSAGE value="Move create enemy to other class" />
+    <MESSAGE value="Move create" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move create" />
   </component>
 </project>
