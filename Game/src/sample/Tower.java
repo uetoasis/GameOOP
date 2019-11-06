@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
-import sample.Enemy.Critter;
 import sample.Enemy.Tank;
 
 import java.util.ArrayList;
@@ -42,7 +41,7 @@ class Tower extends AttackableObject {
         return tower;
     }
     Point pointTower = new Point(this.x,this.y);
-    Tank tank = Controller.createNormalTank();
+    Tank tank = objFactory.createNormalTank();
     ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
     public void update() {

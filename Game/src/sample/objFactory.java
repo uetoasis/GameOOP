@@ -5,7 +5,7 @@ import sample.Enemy.Tank;
 import sample.Enemy.Plane;
 import javafx.scene.image.Image;
 
-public class Controller {
+public class objFactory {
     public static Runner createRunner1(){
         Runner runner = new Runner();
         runner.health = 50;

@@ -24,7 +24,7 @@ public class Game extends Application {
 
     GraphicsContext gc;
     Group root = new Group();
-    List<gameObject> gameObjectList = new ArrayList<>();
+    public static List<gameObject> gameObjectList = new ArrayList<>();
 
     @Override
     public void start(Stage stage) {
@@ -49,8 +49,12 @@ public class Game extends Application {
             }
         };
         timer.start();
-        spawnTroop();
+
+        //spawnTroop();
+        Level.level2();
+        System.out.println(gameObjectList.size());
     }
+
     public void creatMenu()
     {
         ImageView buttonImage = new ImageView(new Image("file:src/Default size/MenuBG1.png"));
@@ -184,10 +188,12 @@ public class Game extends Application {
     //Spawn Enemy Troop
     public void spawnTroop(){
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1500), event ->{
-            gameObjectList.add(Controller.createNormalPlane());
+            gameObjectList.add(objFactory.createNormalPlane());
+            System.out.println(gameObjectList.size());
         }));
-        gameObjectList.add(Tower.createTower());
+        //gameObjectList.add(Tower.createTower());
         timeline.setCycleCount(5);
+
         timeline.play();
     }
 }

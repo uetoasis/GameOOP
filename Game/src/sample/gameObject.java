@@ -2,6 +2,10 @@ package sample;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
+
+import java.util.ArrayList;
+import java.util.List;
+
 // class to nhat
 public abstract class gameObject {
 
