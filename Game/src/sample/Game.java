@@ -49,7 +49,7 @@ public class Game extends Application {
             }
         };
         timer.start();
-        spawnTroop();
+        Level.level4();
     }
     public void creatMenu()
     {

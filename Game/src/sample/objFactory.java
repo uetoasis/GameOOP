@@ -9,7 +9,7 @@ public class objFactory {
     public static Runner createRunner1(){
         Runner runner = new Runner();
         runner.health = 50;
-        runner.speed = 7;
+        runner.speed = 5;
         runner.armor = 4;
         runner.reward = 30;
         runner.damageToPlayer = 2;
@@ -25,7 +25,7 @@ public class objFactory {
         Runner runner = new Runner();
 
         runner.health = 50;
-        runner.speed = 7.5;
+        runner.speed = 5.5;
         runner.armor = 2;
         runner.reward = 35;
         runner.damageToPlayer = 2;
@@ -41,7 +41,7 @@ public class objFactory {
         Runner runner = new Runner();
 
         runner.health = 50;
-        runner.speed = 8.5;
+        runner.speed = 6;
         runner.armor = 3;
         runner.reward = 40;
         runner.damageToPlayer = 2;
@@ -57,7 +57,7 @@ public class objFactory {
         Runner runner = new Runner();
 
         runner.health = 50;
-        runner.speed = 9;
+        runner.speed = 6.5;
         runner.armor = 4;
         runner.reward = 50;
         runner.damageToPlayer = 2;
