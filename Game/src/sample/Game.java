@@ -24,7 +24,7 @@ public class Game extends Application {
 
     GraphicsContext gc;
     Group root = new Group();
-    List<gameObject> gameObjectList = new ArrayList<>();
+    public static List<gameObject> gameObjectList = new ArrayList<>();
 
     @Override
     public void start(Stage stage) {
@@ -184,7 +184,7 @@ public class Game extends Application {
     //Spawn Enemy Troop
     public void spawnTroop(){
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1500), event ->{
-            gameObjectList.add(Controller.createNormalPlane());
+            gameObjectList.add(objFactory.createNormalPlane());
         }));
         gameObjectList.add(Tower.createTower());
         timeline.setCycleCount(5);
