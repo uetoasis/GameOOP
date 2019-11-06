@@ -7,23 +7,28 @@
       <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Critter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Critter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Game$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Plane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Runner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Tank.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/gameObject$Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/gameObject$Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/gameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/gameObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Game/sample/moveAbleObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/moveAbleObj.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Critter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Plane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Runner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Tank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Tower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/gameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/gameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/moveAbleObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/moveAbleObj.java" afterDir="false" />
+      <HEAD>
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Plane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Plane.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Point.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Runner.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/Tank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/Tank.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/gameObject$Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/gameObject$Direction.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/gameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/gameObject.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/out/production/Game/sample/moveAbleObj.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Game/sample/moveAbleObj.class" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Critter.java" beforeDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Game.java" beforeDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Plane.java" beforeDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Point.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Runner.java" beforeDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Tank.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Tower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Tower.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/gameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/gameObject.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/moveAbleObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/moveAbleObj.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/Default size/towerDefense_tile287.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Default size/towerDefense_tile287.png" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+        <change beforePath="$PROJECT_DIR$/src/sample/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Game.java" afterDir="false" />
+      </HEAD>
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

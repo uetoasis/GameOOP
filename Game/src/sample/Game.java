@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -21,15 +23,17 @@ import java.util.List;
 public class Game extends Application {
 
     GraphicsContext gc;
+    Group root = new Group();
     List<gameObject> gameObjectList = new ArrayList<>();
 
     @Override
     public void start(Stage stage) {
-        Canvas canvas = new Canvas( 10*64 , 8*64 );
+        Canvas canvas = new Canvas( 10*64+200 , 8*64 );
         gc = canvas.getGraphicsContext2D();
-        Group root = new Group();
-        root.getChildren().add(canvas);
 
+        root.getChildren().add(canvas);
+        //Tao menu
+        creatMenu();
         // Tao scene
         Scene scene = new Scene(root);
 
@@ -47,6 +51,50 @@ public class Game extends Application {
         timer.start();
         spawnTroop();
     }
+    public void creatMenu()
+    {
+        ImageView buttonImage = new ImageView(new Image("file:src/Default size/MenuBG1.png"));
+        MenuButton startButton = new MenuButton("", buttonImage);
+        startButton.setLayoutX(64*10);
+        startButton.setLayoutY(0);
+        root.getChildren().add(startButton);
+
+        /*ImageView buttonImage = new ImageView(new Image("file:src/Default size/MenuBG1.png"));
+        TowerButton startButton = new MenuButton("", buttonImage);
+        startButton.setLayoutX(64*10);
+        startButton.setLayoutY(0);
+        root.getChildren().add(startButto*/
+        ImageView buttonImage1 = new ImageView(new Image("file:src/Default size/towerDefense_tile287.png"));
+        Button test=new Button("",buttonImage1);
+        test.setLayoutY(50);
+        test.setLayoutX(10*64+20);
+        root.getChildren().add(test);
+
+        ImageView buttonImage2 = new ImageView(new Image("file:src/Default size/6.png"));
+        Button test2=new Button("",buttonImage2);
+        test2.setLayoutY(350);
+        test2.setLayoutX(10*64+40);
+        root.getChildren().add(test2);
+
+        ImageView buttonImage3 = new ImageView(new Image("file:src/Default size/7.png"));
+        Button test3=new Button("",buttonImage3);
+        test3.setLayoutY(350);
+        test3.setLayoutX(10*64+110);
+        root.getChildren().add(test3);
+
+        ImageView buttonImage4 = new ImageView(new Image("file:src/Default size/4.png"));
+        Button test4=new Button("",buttonImage4);
+        test4.setLayoutY(420);
+        test4.setLayoutX(10*64+40);
+        root.getChildren().add(test4);
+
+        ImageView buttonImage5 = new ImageView(new Image("file:src/Default size/mau.png"));
+        Button test5=new Button("",buttonImage5);
+        test5.setLayoutY(95);
+        test5.setLayoutX(10*64+20);
+        root.getChildren().add(test5);
+    }
+
 
     // update
     public void update(){
@@ -136,7 +184,7 @@ public class Game extends Application {
     //Spawn Enemy Troop
     public void spawnTroop(){
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1500), event ->{
-            gameObjectList.add(Controller.createRunner4());
+            gameObjectList.add(Controller.createNormalPlane());
         }));
         gameObjectList.add(Tower.createTower());
         timeline.setCycleCount(5);
