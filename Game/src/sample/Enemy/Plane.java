@@ -1,5 +1,5 @@
-package sample;
-
+package sample.Enemy;
+import sample.*;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.ImageView;
@@ -7,10 +7,10 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class Plane extends Critter {
-    Image shadowImg;
+    public Image shadowImg;
 
     @Override
-    void render(GraphicsContext gc ) {
+    public void render(GraphicsContext gc) {
         SnapshotParameters param = new SnapshotParameters();
         param.setFill(Color.TRANSPARENT);
 
@@ -26,7 +26,7 @@ public class Plane extends Critter {
         gc.drawImage(Plane, x, y);
     }
 
-    void update() {
+    public void update() {
         x += speed + 5;
         y += speed;
     }

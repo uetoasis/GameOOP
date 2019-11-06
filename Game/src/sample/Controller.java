@@ -1,11 +1,13 @@
 package sample;
 
+import sample.Enemy.Runner;
+import sample.Enemy.Tank;
+import sample.Enemy.Plane;
 import javafx.scene.image.Image;
 
 public class Controller {
     public static Runner createRunner1(){
         Runner runner = new Runner();
-
         runner.health = 50;
         runner.speed = 7;
         runner.armor = 4;
@@ -51,7 +53,7 @@ public class Controller {
         return runner;
     }
 
-    public static Runner createRunner4(){
+    public static gameObject createRunner4(){
         Runner runner = new Runner();
 
         runner.health = 50;
@@ -75,7 +77,6 @@ public class Controller {
         tank.speed = 3;
         tank.armor = 10;
         tank.reward = 50;
-        tank.damageToTower = 15;
         tank.damageToPlayer = 5;
 
         tank.x = Game.wayPoints[0].x;
@@ -94,7 +95,6 @@ public class Controller {
         tank.speed = 3;
         tank.armor = 25;
         tank.reward = 100;
-        tank.damageToTower = 20;
         tank.damageToPlayer = 10;
 
         tank.x = Game.wayPoints[0].x;
@@ -122,7 +122,7 @@ public class Controller {
         return plane;
     }
 
-    public Plane createElitePlane(){
+    public static Plane createElitePlane(){
         Plane plane = new Plane();
 
         plane.health = 100;
