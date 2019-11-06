@@ -2,7 +2,6 @@ package sample;
 
 import javafx.scene.image.Image;
 
-
 public class Controller {
     public static Runner createRunner1(){
         Runner runner = new Runner();
