@@ -19,27 +19,44 @@ import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Game extends Application {
 
     GraphicsContext gc;
     Group root = new Group();
+    Group root1 = new Group();
     List<gameObject> gameObjectList = new ArrayList<>();
+
 
     @Override
     public void start(Stage stage) {
-        Canvas canvas = new Canvas( 10*64+200 , 8*64 );
-        gc = canvas.getGraphicsContext2D();
+        boolean startGame=false;
 
-        root.getChildren().add(canvas);
+        Canvas canvas = new Canvas( 600 , 400 );
+        gc = canvas.getGraphicsContext2D();
+        root1.getChildren().add(canvas);
+        Scene scene = new Scene(root1);
+        gc.drawImage(new Image("file:src/Default size/Gamemenu.png"),0,0);
+
+        ImageView buttonImage = new ImageView(new Image("file:src/Default size/1.png"));
+        Button startButton = new Button("", buttonImage);
+        startButton.setLayoutX(64*2+20);
+        startButton.setLayoutY(300);
+        root1.getChildren().add(startButton);
+
+        //xet ButtonAction
+        startButton.setOnAction(event ->
+        {
+                //root.getChildren().removeAll();
+        Canvas canvas1 = new Canvas( 10*64+200 , 8*64 );
+        gc = canvas1.getGraphicsContext2D();
+
+        root.getChildren().add(canvas1);
+
         //Tao menu
         creatMenu();
-        // Tao scene
-        Scene scene = new Scene(root);
-
-        // Them scene vao stage
-        stage.setScene(scene);
-        stage.show();
+        // Tao scen
 
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -50,7 +67,21 @@ public class Game extends Application {
         };
         timer.start();
         spawnTroop();
+        Scene scene1=new Scene(root);
+        stage.setScene(scene1);
+        stage.show();
+        });
+
+
+
+        // Them scene vao stage
+        stage.setScene(scene);
+        stage.show();
+
+
     }
+    //Tao Man Hinh khoi tao
+//ngon rồi đấy
     public void creatMenu()
     {
         ImageView buttonImage = new ImageView(new Image("file:src/Default size/MenuBG1.png"));
@@ -59,11 +90,6 @@ public class Game extends Application {
         startButton.setLayoutY(0);
         root.getChildren().add(startButton);
 
-        /*ImageView buttonImage = new ImageView(new Image("file:src/Default size/MenuBG1.png"));
-        TowerButton startButton = new MenuButton("", buttonImage);
-        startButton.setLayoutX(64*10);
-        startButton.setLayoutY(0);
-        root.getChildren().add(startButto*/
         ImageView buttonImage1 = new ImageView(new Image("file:src/Default size/towerDefense_tile287.png"));
         Button test=new Button("",buttonImage1);
         test.setLayoutY(50);
