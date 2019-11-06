@@ -5,15 +5,15 @@ import javafx.scene.image.Image;
 // class to nhat
 public abstract class gameObject {
 
-    int x;
-    int y;
-    Image img;
+    public int x;
+    public int y;
+    public Image img;
 
-    abstract void update();
+    public abstract void update();
 
-    abstract void render(GraphicsContext gc);
+    public abstract void render(GraphicsContext gc);
 
-    enum Direction{
+    protected enum Direction{
         LEFT(180), UP(270), RIGHT(0), DOWN(90);
 
         int degree;
@@ -22,7 +22,7 @@ public abstract class gameObject {
             degree = i;
         }
 
-        int getDegree(){
+        public int getDegree(){
             return degree;
         }
     }

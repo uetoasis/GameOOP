@@ -1,12 +1,12 @@
-package sample;
+package sample.Enemy;
 
-import javafx.scene.SnapshotParameters;
-import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.image.ImageView;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-
-public class Tank extends Critter {
+import sample.*;
+//enemy
+public abstract  class Critter extends moveAbleObj {
+    public int health;
+    public int reward;
+    public int armor;
+    public int damageToPlayer;
     public final static  Point[] wayPoints = new Point[]{
             new Point( 0*64 + 32 , 7*64 + 32 ),//0
             new Point( 0*64 + 32 , 5*64 + 32 ),//1
@@ -14,26 +14,9 @@ public class Tank extends Critter {
             new Point( 3*64 + 32 , 1*64 + 32 ),//3
             new Point( 6*64 + 32 , 1*64 + 32 ),//4
             new Point( 6*64 + 32 , 4*64 + 32 ),//5
-            new Point( 9*64 + 32 , 4*64 + 32 )
+            new Point( 9*64 + 32 , 4*64 + 32 ) //6
     };
-    Image gunImg;
 
-    @Override
-    void render(GraphicsContext gc ) {
-        SnapshotParameters param = new SnapshotParameters();
-        param.setFill(Color.TRANSPARENT);
-
-        ImageView iv = new ImageView( img );
-        iv.setRotate(calculateDirection());
-        Image base =iv.snapshot(param, null);
-
-        ImageView iv2 = new ImageView( gunImg );
-        iv2.setRotate(calculateDirection());
-        Image gun = iv2.snapshot( param, null );
-
-        gc.drawImage(base, x, y);
-        gc.drawImage(gun, x, y);
-    }
     int calculateDirection() {
         if( this.x  >= wayPoints[6].x ) return 0;
         else if(this.x <= wayPoints[1].x && this.y > wayPoints[1].y) return Direction.UP.getDegree();
@@ -45,11 +28,11 @@ public class Tank extends Critter {
         return 0;
     }
 
-    void update() {
-
-            if(calculateDirection() == 0 && this.x < wayPoints[6].x ) x += this.speed;
-            else if(calculateDirection() == 90) y += this.speed;
-            else if(calculateDirection() == 270) y -= this.speed;
-            else if(calculateDirection() == 180) x -= this.speed;
+    public void update() {
+        if(calculateDirection() == 0 && this.x < wayPoints[6].x + 100) x += this.speed;
+        else if(calculateDirection() == 90) y += this.speed;
+        else if(calculateDirection() == 270) y -= this.speed;
+        else if(calculateDirection() == 180) x -= this.speed;
     }
 }
+
