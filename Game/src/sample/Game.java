@@ -20,6 +20,8 @@ import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import static sample.Level.level4;
+
 public class Game extends Application {
 
     GraphicsContext gc;
@@ -48,8 +50,8 @@ public class Game extends Application {
                 update();
             }
         };
+        level4();
         timer.start();
-        Level.level4();
     }
     public void creatMenu()
     {

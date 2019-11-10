@@ -74,7 +74,7 @@ public class objFactory {
 
         //tank index
         tank.health = 100;
-        tank.speed = 3;
+        tank.speed = 4;
         tank.armor = 10;
         tank.reward = 50;
         tank.damageToPlayer = 5;
