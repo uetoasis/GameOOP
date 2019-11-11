@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 
 public class Plane extends Critter {
+
     public Image shadowImg;
 
     @Override

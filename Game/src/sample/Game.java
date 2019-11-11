@@ -50,8 +50,10 @@ public class Game extends Application {
                 update();
             }
         };
-        level4();
+        gameObjectList.add(objFactory.createRunner1());
+        gameObjectList.add(Tower.createTower());
         timer.start();
+//        towerList.add(Tower.createTower());
     }
     public void creatMenu()
     {
@@ -119,17 +121,6 @@ public class Game extends Application {
             {"030","005","006","006","032","160","160","111","111","111"},
             {"030","028","111","160","160","160","160","160","160","160"},
     };
-
-    public final static  Point[] wayPoints = new Point[]{
-            new Point( 0*64 + 32 , 7*64 + 32 ),//0
-            new Point( 0*64 + 32 , 5*64 + 32 ),//1
-            new Point( 3*64 + 32 , 5*64 + 32 ),//2
-            new Point( 3*64 + 32 , 1*64 + 32 ),//3
-            new Point( 6*64 + 32 , 1*64 + 32 ),//4
-            new Point( 6*64 + 32 , 4*64 + 32 ),//5
-            new Point( 9*64 + 32 , 4*64 + 32 )
-    };
-
     //draw map
     private void drawMap(GraphicsContext gc ){
         for( int i = 0; i < mapNum.length; i++ ){
@@ -180,16 +171,6 @@ public class Game extends Application {
         gc.drawImage(sand3, 8*64 , 1*64 );
     }
 
-    //This method to calculate distance
-
-
     //Spawn Enemy Troop
-    public void spawnTroop(){
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1500), event ->{
-            gameObjectList.add(objFactory.createNormalPlane());
-        }));
-        gameObjectList.add(Tower.createTower());
-        timeline.setCycleCount(5);
-        timeline.play();
-    }
+
 }

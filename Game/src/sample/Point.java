@@ -23,37 +23,12 @@ public class Point {
         return this;
     }
 
-    public double distance(Critter critter) {
+    public double distance(gameObject critter) {
         return Math.sqrt(Math.pow(this.x - critter.x, 2) + Math.pow(this.y - critter.y, 2));
     }
     public void add(Point v) {
         this.y += v.y;
         this.x += v.x;
-    }
-    public Point mult(float n){
-        this.x *= n;
-        this.y *= n;
-        return this;
-    }
-    public float mag() {
-        return (float) Math.sqrt(x*x + y*y);
-    }
-    public Point div(float n) {
-        x /= n;
-        y /= n;
-        return this;
-    }
-    public Point normalize() {
-        float m = mag();
-        if (m != 0 && m != 1) {
-            div(m);
-        }
-        return this;
-    }
-    public Point setMag(float len) {
-        normalize();
-        mult(len);
-        return this;
     }
 
 }

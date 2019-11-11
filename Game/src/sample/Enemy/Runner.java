@@ -17,6 +17,4 @@ public class Runner extends Critter {
 
         gc.drawImage(Runner, x, y);
     }
-
-
 }

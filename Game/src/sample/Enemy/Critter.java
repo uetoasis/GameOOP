@@ -7,6 +7,15 @@ public abstract  class Critter extends moveAbleObj {
     public int reward;
     public int armor;
     public int damageToPlayer;
+    boolean alive = true;
+
+    public void takeDamage( int Damage ){
+        this.health = this.health - Damage + this.armor;
+    }
+
+    public void isAlive(){
+        if( this.health <= 0 ) alive = false;
+    }
     public final static  Point[] wayPoints = new Point[]{
             new Point( 0*64 + 32 , 7*64 + 32 ),//0
             new Point( 0*64 + 32 , 5*64 + 32 ),//1
